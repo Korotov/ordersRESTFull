@@ -12,13 +12,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "T_ORDERS")
 public class Order {
-    @JsonIgnore
-    @ManyToOne
-    private Account account;
-
     @Id
     @GeneratedValue
     private Long id;
+
+    @JsonIgnore
+    @ManyToOne
+    private Account account;
     private String referUrl;
     private String formName;
     private String phoneNumber;
